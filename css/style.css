@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+.sideMenu {
+  position: absolute;
+  background-color: #d6cebe;
+  height: 60%;
+  width: 250px;
+  top: 0px;
+  left: 0px;
+  padding: 10px 10px 10px 10px;
+  margin-top: 150px;
+}
+
+.my-item{
+  cursor: pointer;
+}
+
+.spotName {
+  color: #AECA7E
+}
+
+.spotLink {
+  color: #d6cebe
+}
+
+.menuIcon {
+  display: none;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 767px) {
+	.menuIcon {
+		  display: block;
+	    position: absolute;
+	    height: 55px;
+	    left: 30px;
+	    top: 60px;
+	}
+	.sideMenu {
+	    -webkit-transform: translate(-400px, 0);
+	    transform: translate(-400px, 0);
+	    transition: transform 0.6s ease;
+	    width: 180px;
+	}
+	.sideMenu-display {
+	    -webkit-transform: translate(0, 0);
+		  transform: translate(0, 0);
+	}
+}
