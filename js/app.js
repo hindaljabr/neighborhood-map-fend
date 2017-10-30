@@ -179,8 +179,8 @@ function wikipediaAPI(spot) {
             //To retrieve articls from wikipedia
             var wikipediaArticle = response[1];
             var url = "http://en.wikipedia.org/wiki/" + wikipediaArticle[0];
-            spot.url = url
-            spot.extract = response[2]
+            spot.url = url;
+            spot.extract = response[2];
         }
     });
 }
