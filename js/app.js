@@ -165,7 +165,7 @@ function wikipediaAPI(spot) {
     //To handle wikipedia timeout error if there's no response for 5 seconds
     //I knew about the setTimeout function and how to use it from https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
     var wikiRequestTimeOut = setTimeout(function() {
-        $('p').append("Failed to load wikipedia api.");
+        alert('Failed to load wikipedia api.');
     }, 5000);
 
     //To call the wikipedia API
@@ -175,12 +175,12 @@ function wikipediaAPI(spot) {
         url: "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + spot.wikipediaPageName + "&format=json&callback=wikiCallback;",
         dataType: "JSONP",
         success: function(response) {
-
             //To retrieve articls from wikipedia
             var wikipediaArticle = response[1];
             var url = "http://en.wikipedia.org/wiki/" + wikipediaArticle[0];
-            spot.url = url;
-            spot.extract = response[2];
+            spot.url = url
+            spot.extract = response[2]
+            clearTimeout(wikiRequestTimeOut);
         }
     });
 }
