@@ -235,7 +235,7 @@ var ViewModel = function() {
 			self.genWindow(marker, infoWindow, spot);
 			marker.setAnimation(google.maps.Animation.BOUNCE);
 			setTimeout(function() {
-				marker.setAnimation(null);
+				spot.marker.setAnimation(null);
 			}, 900);
 		};
 
